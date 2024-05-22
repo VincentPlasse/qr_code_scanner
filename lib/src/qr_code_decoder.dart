@@ -9,7 +9,7 @@ class QRDecoder {
   final Completer<String> _completer;
 
   QRDecoder(this.path)
-      : _channel = MethodChannel("net.touchcapture.qr.flutterqr/photo_decoder"),
+      : _channel = const MethodChannel("net.touchcapture.qr.flutterqr/photo_decoder"),
         _completer = Completer<String>() {
     _channel.setMethodCallHandler(
       (MethodCall call) async {
